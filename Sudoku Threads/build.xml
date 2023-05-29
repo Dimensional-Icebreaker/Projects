@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<project name="Suduko" default="build">
+  <presetdef name="javac">
+    <javac includeantruntime="true" />
+  </presetdef>
+
+  <target name="build" description="Compile source tree java files">
+    <javac debug="true" failonerror="true">
+      <src path="."/>
+    </javac>
+  </target>
+  <target name="compile">
+       <javac srcdir="." includeantruntime="true" includes="ThreadsOfSudoku.java" destdir="."></javac>
+  </target>
+
+ <target name="run" depends="compile">
+    <java classname="ThreadsOfSudoku" fork="true">
+      <arg value="4"/>
+      <arg value="puzzle.txt"/>
+      <arg value="13_zeros"/>
+    </java>
+  </target>
+  <target name="clean" description="Clean output files">
+    <delete>
+      <fileset dir=".">
+        <include name="**/*.class"/>
+      </fileset>
+    </delete>
+  </target>
+</project>

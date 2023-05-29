@@ -1,0 +1,271 @@
+====================
+HOMEWORK P12 RESULTS
+====================
+
+Spring 2023
+
+NOTE: We will not be grading for "correct" answers, since your results may vary, but rather answers that are consistent with your measured results.
+
+IMPORTANT: If at all possible, time your program on a machine with at least 4 cores. (CSE VM may be configured to use multiple cores in the VirtualBox properties panel.)
+
+FULL CREDIT
+===========
+
+QUESTION 1: Which puzzle did you use as ThreadsOfSudoku's parameter to achieve a 30+ second runtime (using "real"): 14_zeros
+
+QUESTION 2: Provide the full ``time`` output for your program, with 1 to 16 threads. It may prove interesting to screenshot your system monitor while these run. You may be able to run all of these with a single bash command if you like (replace 14_zeros with your puzzle from QUESTION 1): 
+
+for i in {1..16} ; do printf "\n Threads %d:\n" $i ; time (java ThreadsOfSudoku $i puzzle.txt 14_zeros > temp.txt) ; done
+
+Example Timing (first 2 of 16 runs only on Antares):
+
+ricegf@antares$ for i in {1..16} ; do printf "\n Threads %d:\n" $i ; time (java ThreadsOfSudoku $i puzzle.txt 14_zeros > temp.txt) ; done
+
+ Threads 1:
+
+real	2m0.684s
+user	2m0.919s
+sys	0m0.292s
+
+ Threads 2:
+
+real	1m4.553s
+user	2m7.003s
+sys	0m0.252s
+
+
+
+YOUR Timing:
+
+ Threads 1:
+
+real	5m38.793s
+user	5m37.019s
+sys	0m4.317s
+
+ Threads 2:
+
+real	2m56.316s
+user	5m37.665s
+sys	0m3.845s
+
+ Threads 3:
+
+real	2m1.368s
+user	5m14.938s
+sys	0m11.907s
+
+ Threads 4:
+
+real	1m46.734s
+user	5m14.187s
+sys	0m35.490s
+
+ Threads 5:
+
+real	1m39.747s
+user	5m0.174s
+sys	0m48.778s
+
+ Threads 6:
+
+real	1m42.575s
+user	5m26.098s
+sys	0m31.028s
+
+ Threads 7:
+
+real	1m38.796s
+user	4m50.041s
+sys	1m8.578s
+
+ Threads 8:
+
+real	1m42.239s
+user	5m11.602s
+sys	0m38.740s
+
+ Threads 9:
+
+real	1m41.777s
+user	5m0.836s
+sys	1m1.343s
+
+ Threads 10:
+
+real	1m42.917s
+user	5m6.274s
+sys	1m7.346s
+
+ Threads 11:
+
+real	1m52.271s
+user	5m30.249s
+sys	1m15.280s
+
+ Threads 12:
+
+real	1m51.652s
+user	5m20.585s
+sys	1m9.904s
+
+ Threads 13:
+
+real	1m58.003s
+user	5m58.236s
+sys	1m1.149s
+
+ Threads 14:
+
+real	1m43.315s
+user	5m10.120s
+sys	1m5.629s
+
+ Threads 15:
+
+real	1m43.863s
+user	4m59.606s
+sys	1m4.683s
+
+ Threads 16:
+
+real	1m48.670s
+user	5m23.689s
+sys	0m45.461s
+
+
+
+
+
+
+QUESTION 3: Does adding more threads continue to speed up the program? Do more threads ever slow down the program slightly?  Why or why not?
+
+From my example Adding more threads to a program  speed the performance up initially, but there was a point where adding more threads actually slowed down the program.
+I think this happened due to the nature of the program and the exact hardware limitations for the system that I am using to run the program. Obviously running things concurrently is faster if we have to think about it but
+there are lots of limitations in program itself and the hardware too which can lead to even reduced performance.
+
+
+
+QUESTION 4: Does adding more threads increase the "system load", or is it constant regardless of the number of threads?  Why?
+
+At one point in my program it did increase the system load while adding more threads as we can see slight performace drawbacks
+adding more threads can increase the system load as each thread requires additional resources to execute. 
+
+
+BONUS
+=====
+
+QUESTION 5: Time your thread pool version of ThreadsOfSudoku as you did for the full credit version. Post your timings here.
+
+YOUR Timing:
+
+Threads 1:
+
+real	3m10.469s
+user	6m9.184s
+sys	0m3.572s
+
+ Threads 2:
+
+real	2m1.705s
+user	5m42.620s
+sys	0m6.064s
+
+ Threads 3:
+
+real	1m57.946s
+user	7m13.834s
+sys	0m15.916s
+
+ Threads 4:
+
+real	1m49.688s
+user	6m31.729s
+sys	0m15.580s
+
+ Threads 5:
+
+real	1m41.475s
+user	6m9.268s
+sys	0m16.427s
+
+ Threads 6:
+
+real	1m51.007s
+user	6m31.026s
+sys	0m19.187s
+
+ Threads 7:
+
+real	1m37.866s
+user	5m43.871s
+sys	0m16.748s
+
+ Threads 8:
+
+real	1m34.314s
+user	5m30.967s
+sys	0m16.890s
+
+ Threads 9:
+
+real	1m38.439s
+user	5m35.785s
+sys	0m18.496s
+
+ Threads 10:
+
+real	1m36.327s
+user	5m35.101s
+sys	0m18.289s
+
+ Threads 11:
+
+real	1m59.340s
+user	6m51.165s
+sys	0m22.405s
+
+ Threads 12:
+
+real	1m52.260s
+user	6m38.513s
+sys	0m19.977s
+
+ Threads 13:
+
+real	1m54.785s
+user	6m34.500s
+sys	0m21.304s
+
+ Threads 14:
+
+real	1m43.803s
+user	6m0.062s
+sys	0m20.537s
+
+ Threads 15:
+
+real	1m37.385s
+user	5m27.033s
+sys	0m23.449s
+
+ Threads 16:
+
+real	1m44.396s
+user	6m2.223s
+sys	0m23.975s
+
+
+
+
+QUESTION 6: Is a thread pool faster, slower, or roughly equivalent in performance? 
+
+Compared to the full_credit,thread pool is sligtly faster for most of the threads as you can see decreased time for each threads as compared to the time performace of full_credit.
+But the above statement doesn't hold true for all the available threads; for some secific threads like 4,5,6 full credit threading appears to be slightly faster by seconds 
+
+QUESTION 7: Compare the full credit and bonus solution code. Which do you believe is more supportable over a long lifetime of evolving hardware and environments?
+
+Thread pool threading is designed to handle a large number of short-duration tasks, which can result in better performance and scalability than regular threading. It allows you to reuse threads and eliminates the overhead of creating and destroying threads for each task, which can reduce the overall system load.
+I think the choice between thread pool threading and regular threading depends on the specific requirements of the application, the hardware and environment it runs on and other factors. From the comparision of the above code 
+the behaviour of regular threading was slightly more predictable and reasonable.But for threadpool we could see the decreased performances in some threads.However, thread pool threading may be more advantageous for applications that require high concurrency and scalability as we could see it had decreased time 
+overall and it was sligtly faster, while regular threading may be more suitable for tasks that require more control over the thread's behavior 
