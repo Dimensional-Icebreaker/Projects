@@ -1,0 +1,5 @@
+/* Ribesh Joshi 1001829863 */
+char *PhraseBank[] = {"One morning I shot an elephant in my pajamas","After all, tomorrow is another day!", "Teach a man to fish, and he will sit in a boat and drink beer all day",
+                 "Always take life with a grain of salt and a shot of tequila", "Houston, we have a problem.", "It takes a lot of balls to golf the way I do",
+				 "Never trust atoms; they make up everything", "What do fish say when they hit a concrete wall? (Dam!)",
+				 "What do you call a hippie’s wife? Mississippi", "Seize the day!!!","Carpe Diem!",""};
