@@ -1,32 +1,31 @@
 
 Movie Theater Management System
 This is a Movie Theater Management System implemented in C Programming. The system uses FIFO (Queue) and LIFO (Stack) data structures to manage ticket bookings, cancellations, and seat allocations. It also features a multi-hall tracking system using zip codes and an ASCII-based Command Line Interface (CLI) for user interaction.
-
+-------------------------------------------------------------------------------------------
 Prerequisites
 GCC Compiler: Ensure you have the GCC compiler installed to compile the C program.
 
 Linux/Unix-based System: The commands provided are for Linux/Unix-based systems. For Windows, consider using tools like Cygwin or WSL.
-
+----------------------------------------------------------------------------------------
 How to Run the Program
 Step 1: Clone the Repository
 Clone this repository to your local machine using the following command:
 
 bash
-Copy
-git clone https://github.com/[YourUsername]/[RepositoryName].git
-Replace [YourUsername] and [RepositoryName] with your GitHub username and repository name.
+git clone "https://github.com/Dimensional-Icebreaker/Projects/tree/main/Movie%20Theater"
+
 
 Step 2: Navigate to the Project Directory
 Change to the project directory:
 
 bash
-Copy
-cd [RepositoryName]
+
+cd /Movie Theater
+
 Step 3: Compile the Program
 Use the make command to compile the program:
 
 bash
-Copy
 make
 This will generate an executable file named Theater.e.
 
@@ -34,25 +33,19 @@ Step 4: Run the Program
 Execute the program using the following command:
 
 bash
-Copy
 ./Theater.e
+
+
+
+------------------------------------------------------------------
 Program Features
 Ticket Booking: Book tickets using a Queue (FIFO) system.
-
-Cancellations: Handle cancellations using a Stack (LIFO) system.
 
 Multi-Hall Management: Track multiple theater halls using zip codes.
 
 ASCII CLI: Interact with the system through a user-friendly Command Line Interface.
 
-Folder Structure
-C
-RepositoryName/
-├── src/                # Source code files
-├── include/            # Header files
-├── Makefile            # Makefile for compilation
-├── README.md           # This file
-└── Theater.e           # Executable file (generated after compilation)
+--------------------------------------------------------------------------------------
 Troubleshooting
 Compilation Errors: Ensure you have the GCC compiler installed. If not, install it using:
 
@@ -61,11 +54,11 @@ sudo apt install gcc
 Permission Denied: If you encounter permission issues, make the executable file executable using:
 
 chmod +x Theater.e
-
+-------------------------------------------------------------------------------------------------
 Contributing
 Contributions are welcome! If you find any issues or want to enhance the project, feel free to open a Pull Request or submit an Issue.
-
+------------------------------------------------------------------------------------------------
 License
-This project is licensed under the MIT License. See the LICENSE file for details.
+-.
 
 This README.md provides clear instructions for compiling and running your program, along with additional details about the project structure and features. You can customize it further to suit your needs!
